@@ -1,0 +1,8 @@
+<h1>Pictures<h1>
+<h3>url ‘pictures / 1</h3>
+<h4> folder: pictures -> resource: picture1.html.erb (‘pictures#picture1’)</h4>
+
+<% @pictures.each do |picture| %>
+	<p><%= picture[:title] %>, <%= picture[:artist] %></p>
+	<img src = <%= picture[:url] %> >
+	<% end %>
