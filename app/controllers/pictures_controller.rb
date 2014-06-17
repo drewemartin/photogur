@@ -20,7 +20,7 @@ class PicturesController < ApplicationController
 	end
 
   def picture0
-    @pictures = {
+    @picture = {
       :title  => "The old church on the coast of White sea",
       :artist => "Sergey Ershov",
       :url    => "http://monicao.s3.amazonaws.com/bitmaker/house.jpg"
@@ -28,7 +28,7 @@ class PicturesController < ApplicationController
   end
 
   def picture1
-    @pictures = {
+    @picture = {
       :title  => "Sea Power",
       :artist => "Stephen Scullion",
       :url    => "http://monicao.s3.amazonaws.com/bitmaker/wave.jpg"
@@ -36,7 +36,7 @@ class PicturesController < ApplicationController
   end
 
   def picture2
-    @pictures = {
+    @picture = {
       :title  => "Into the Poppies",
       :artist => "John Wilhelm",
       :url    => "http://monicao.s3.amazonaws.com/bitmaker/girl.jpg"
