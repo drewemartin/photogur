@@ -1,0 +1,24 @@
+<h1>Edi Picture</h1>
+<h3>url ‘/pictures/:id/edit'</h3>
+<h4> folder: pictures -> resource: edit.html.erb (‘pictures#edit’)</h4>
+<p>
+	<%= link_to "Back", @picture %>
+</p>
+
+<%= form_for @picture do |f| %>
+	<p>
+		<%= f.label "artist" %><br>
+		<%= f.text_field "artist" %>
+	</p>
+	<p>
+		<%= f.label "title" %><br>
+		<%= f.text_field "title" %>
+	</p>
+	<p>
+		<%= f.label "url" %><br>
+		<%= f.text_field "url" %>
+	</p>
+	<p> 
+		<%= submit_tag "save" %>
+	</p>
+<%end%>
