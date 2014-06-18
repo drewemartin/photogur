@@ -1,21 +1,25 @@
 Photogur::Application.routes.draw do
 
-root :to => 'pictures#index'
-#this makes the index the homepage/root instead
-# of the "Rails" page
+  resources :pictures
 
-get 'pictures' => 'pictures#index'
+# post 'pictures/' => 'pictures#create' #add new part 2
+# #this makes the index the homepage/root instead
+# # of the "Rails" page
 
-get 'pictures/new' => 'pictures#new' #add new part 1
-post 'pictures/' => 'pictures#create' #add new part 2
+# get 'pictures' => 'pictures#index'
 
-get 'pictures/:id/edit' => 'pictures#edit', as: "edit_picture" #edit part 1
-patch 'pictures/:id' => 'pictures#update' #edit part 2
+# get 'pictures/new' => 'pictures#new' #add new part 1
+
+
+# get 'pictures/:id/edit' => 'pictures#edit', as: "edit_picture" #edit part 1
+# # patch 'pictures/:id' => 'pictures#update' #edit part 2
+
+# # delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
  
 
-get 'pictures/:id' => 'pictures#show', as: "picture"
+# get 'pictures/:id' => 'pictures#show', as: "picture"
 
-
+  root :to => 'pictures#index'
 
 
 end
