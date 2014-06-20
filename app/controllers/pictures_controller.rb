@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
 	def index
-		@pictures = Picture.all
+		@most_recent_pictures = Picture.most_recent_five
     # Picture refers to the Picture table under the model
     # @picture(s) is plural since it referes to all pictures 
     # held in the DB. plus since it contains multiple items

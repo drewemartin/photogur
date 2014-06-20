@@ -1,10 +1,11 @@
-<h1>Pictures<h1>
+<h1>Most Recent Pictures<h1>
 <h3>url ‘pictures’ /</h3>
 <h4> folder: pictures -> resource: index.html.erb (‘pictures#index’)</h4>
 <%= link_to "New Picture", "pictures/new" %>
 
-<% @pictures.each do |picture| %>
-	<p><%= picture[:title] %>, <%= picture[:artist] %>
-	</p>
-	<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
+<ul>
+<% @most_recent_pictures.each do |picture| %>
+	<li><%= picture[:title] %></li>
+
 	<% end %>
+</ul>
